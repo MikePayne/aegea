@@ -388,6 +388,11 @@ a:focus-visible {
 }
 .menu-links a {
 	margin-right: 20px;
+	border-bottom: 2px solid #9C0f1A;
+}
+.menu-links a:hover{
+	text-decoration: none;
+	border-bottom: 4px solid #9C0f1A;
 }
 .social-links a {
 	margin: 0 5px;
