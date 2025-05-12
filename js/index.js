@@ -78,3 +78,28 @@ preloadImages('.grid__img').then(() => {
   init();
   window.scrollTo(0, 0);
 });
+
+// Handle mobile menu opening/closing
+const mobileMenu = document.getElementById('mobile-menu');
+const hamburger = document.querySelector('.hamburger');
+const closeIcon = document.querySelector('.close-icon');
+
+// Function to open the mobile menu
+function openMenu() {
+  console.log('open');
+  mobileMenu.classList.add('open');
+}
+
+// Function to close the mobile menu
+function closeMenu() {
+  console.log('close');
+  mobileMenu.classList.remove('open');
+}
+
+// Add click event listeners
+hamburger.addEventListener('click', openMenu);
+closeIcon.addEventListener('click', closeMenu);
+
+// Also handle touch events for mobile
+// hamburger.addEventListener('touchstart', openMenu);
+// closeIcon.addEventListener('touchstart', closeMenu);
