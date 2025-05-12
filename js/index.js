@@ -100,6 +100,8 @@ function closeMenu() {
 hamburger.addEventListener('click', openMenu);
 closeIcon.addEventListener('click', closeMenu);
 
-// Also handle touch events for mobile
-// hamburger.addEventListener('touchstart', openMenu);
-// closeIcon.addEventListener('touchstart', closeMenu);
+// Add click event listeners for all <a> tags inside #mobile-menu
+const menuLinks = mobileMenu.querySelectorAll('a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
